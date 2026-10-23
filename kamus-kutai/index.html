@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="color-scheme" content="light dark">
+<title>Kamus Bahasa Kutai</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div class="band"></div>
+<div class="wrap">
+  <div class="top">
+    <div><h1>Kamus Bahasa Kutai</h1><p class="sub" id="stat">Kutai ⇄ Indonesia</p></div>
+    <div class="tools">
+      <button class="ib" id="rnd" title="Kata acak" aria-label="Tampilkan kata acak">🎲</button>
+      <button class="ib" id="thm" title="Ganti tema" aria-label="Ganti tema terang/gelap">☾</button>
+    </div>
+  </div>
+  <div class="tabs" role="tablist">
+    <button class="tab" role="tab" id="tab-kamus" aria-selected="true">Kamus</button>
+    <button class="tab" role="tab" id="tab-fav" aria-selected="false">★ Favorit (<span id="fc">0</span>)</button>
+  </div>
+  <div class="bar">
+    <div class="sb">
+      <input id="q" type="search" autocomplete="off" autocapitalize="off" spellcheck="false" enterkeyhint="search" aria-label="Cari kata">
+      <button id="clr" hidden aria-label="Hapus pencarian">×</button>
+    </div>
+    <div class="seg" role="group" aria-label="Arah pencarian">
+      <button data-mode="kutai" aria-pressed="true">Kutai → Indonesia</button>
+      <button data-mode="indo" aria-pressed="false">Indonesia → Kutai</button>
+      <button data-mode="semua" aria-pressed="false">Semua</button>
+    </div>
+  </div>
+  <nav class="az" id="az" aria-label="Filter huruf awal"></nav>
+  <div id="hero"></div>
+  <div class="meta" id="meta" aria-live="polite"></div>
+  <main id="list"></main>
+  <button id="more" hidden>Tampilkan lebih banyak</button>
+  <footer>
+    <details><summary>Singkatan &amp; tanda yang dipakai</summary>
+      <p>Tanda <span class="tl">~</span> pada contoh kalimat mewakili kata entri atau bentuk turunannya.</p>
+      <ul class="abbr">
+        <li><b>yg</b> = yang</li><li><b>dng</b> = dengan</li><li><b>utk</b> = untuk</li><li><b>tdk</b> = tidak</li>
+        <li><b>krn</b> = karena</li><li><b>dsb</b> = dan sebagainya</li><li><b>spt</b> = seperti</li><li><b>bhs</b> = bahasa</li>
+        <li><b>dpt</b> = dapat</li><li><b>sb</b> = sebangsa</li><li><b>ybs</b> = yang bersangkutan</li><li><b>tsb</b> = tersebut</li>
+        <li><b>blm</b> = belum</li><li><b>sda</b> = sama dengan di atas</li>
+      </ul>
+    </details>
+    <div id="src"></div>
+    <div>Pintasan: tekan <b>/</b> untuk mencari, <b>Esc</b> untuk menghapus.</div>
+  </footer>
+</div>
+<div id="toast" role="status" aria-live="polite"></div>
+<script src="js/data.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>
